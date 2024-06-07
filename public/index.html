@@ -1,127 +1,177 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>𝛥𝛮𝐽𝛥𝛮-𝛸𝐷-𝐵𝛩𝑇</title></title>
-    <link rel="icon" href="https://graph.org/file/a9ad23c1153a05cafe814.jpg" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
-        @font-face {
-            font-family: 'thunder';
-            src: url('./assets/thunder.woff') format('woff2'),
-                 url('./assets/thunder.woff2') format('woff');
-            /* You may need to adjust the paths to the "Inter" font files */
-        }
 
-        body {
-            user-select: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-            margin: 0;
-            font-family: 'Bebas Neue', Arial, sans-serif; /* Use the custom "Thunder" font here */
-            background: #000000;
-            overflow: hidden;
-            color: #ffffff; /* Text color */
-        }
+  <meta charset="UTF-8">
 
-        .large-title {
-            font-size: 85px; /* Larger font size */
-            margin: 2rem;
-            opacity: 0; /* Start with zero opacity for the fade-in animation */
-            animation: fadeIn 2s ease forwards; /* Apply fade-in animation */
-        }
-        .shadow__btn {
-        padding: 10px 20px;
-        border: none;
-        margin: .2rem;
-        font-size: 17px;
-        color: #000000;
-        border-radius: 7px;
-        font-family: 'thunder', sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        transition: 0.5s;
-        transition-property: box-shadow;
-      }
+  <link rel="shortcut icon" type="x-icon" href="null">
 
-      .shadow__btn {
-        background: rgb(255, 255, 255);
-        box-shadow: 0 0 25px rgb(255, 255, 255);
-      }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      .shadow__btn:hover {
-        box-shadow: 0 0 5px rgb(255, 192, 203),
-              0 0 25px rgb(255, 192, 203),
-              0 0 50px rgb(255, 192,203),
-              0 0 100px rgb(255, 192, 203);
-        }
-        .dropdown {
-            display: none;
-            padding: 10px;
-            width: 400px;
-            border: 1px solid #ffffff;
-            background-color: #000000;
-            border-radius: 10px;
-            position: absolute;
-            top: 30px;
-            left: -180px;
-            z-index: 1;
-        }
-        .button-container {
-          opacity: 0;
-          animation: fadeIn 2s ease 1s forwards; /* Apply fade-in animation */
-        }
-        .seemore-container {
-            opacity: 0;
-            font-family: 'Montserrat',sans-serif;
-            font-size: small;
-            position:relative;
-            top: 10rem;
-            cursor: help;
-            animation: fadeInV2 2s ease 4s forwards; /* Apply fade-in animation */
-          }
-        .show-dropdown {
-            display: block;
-        }
-       @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-       @keyframes fadeInV2 {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 0.3;
-            }
-        }
-        
-    </style>
+  <style>
+
+    body {
+
+      display: flex;
+
+      flex-direction: column; /* Stack items vertically */
+
+      align-items: center;
+
+      justify-content: center;
+
+      height: 100vh;
+
+      margin: 0;
+
+      background-image: url("https://i.imgur.com/lBI2aHf.jpeg"); /* Set the background image */
+
+      background-repeat: no-repeat;
+
+      background-position: center;
+
+      background-size: cover;
+
+    }
+
+
+
+    .btn {
+
+      --color: hsl(0, 0%, 0%);
+
+      --color2: rgb(255, 0, 255);
+
+      width: 200px; /* Set a fixed width for the buttons */
+
+      padding: 0.8em 1.75em;
+
+      background-color: white;
+
+      border-radius: 6px;
+
+      border: .3px black;
+
+      transition: .5s;
+
+      position: relative;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      z-index: 1;
+
+      font-weight: 300;
+
+      font-size: 17px;
+
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+
+      text-transform: uppercase;
+
+      color: var(--color);
+
+      margin-bottom: 10px; /* Add margin to separate buttons */
+
+    }
+
+
+
+    .btn::after, .btn::before {
+
+      content: '';
+
+      display: block;
+
+      height: 100%;
+
+      width: 100%;
+
+      transform: skew(90deg) translate(-50%, -50%);
+
+      position: absolute;
+
+      inset: 50%;
+
+      left: 25%;
+
+      z-index: -1;
+
+      transition: .5s ease-out;
+
+      background-color: var(--white);
+
+    }
+
+
+
+    .btn::before {
+
+      top: -50%;
+
+      left: -25%;
+
+      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+
+    }
+
+
+
+    .btn:hover::before {
+
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+
+    }
+
+
+
+    .btn:hover::after {
+
+      transform: skew(45deg) translate(-50%, -50%);
+
+    }
+
+
+
+    .btn:hover {
+
+      color: white;
+
+    }
+
+
+
+    .btn:active {
+
+      filter: brightness(.9);
+
+      transform: scale(.98);
+
+    }
+
+  </style>
+
 </head>
+
 <body>
-    <h1 class="large-title">ANJAN</h1>
-    <h2 style="font-family: 'thunder',sans-serif; font-weight: 140; opacity: 0; animation: fadeIn 2s ease 0.5s forwards;">How do you want to pair?</h2>
-    <div class="button-container">
-        <button type="button" onclick="window.location ='/qr'" class="shadow__btn">Via Qr</button>
-        <button type="button" onclick="window.location ='/pair'" class="shadow__btn">Via Pair</button>
-      </form>
-        </div>
-        <div class="seemore-container">
-          <span id="seeMoreButton" class="info-icon"><u>IMPORTANT NOTE</u></span>
-          <script>
-              const seeMoreButton = document.getElementById('seeMoreButton');
-              seeMoreButton.addEventListener('click', function (event) {
-                alert('If Not Working Pair Code, Use Qr Code  With Using a Vpn!!')
-              });
-             </script>
-          </div>
+
+
+
+  <button onclick="window.open(`/pair`)" class="btn">PAIR CODE</button>
+
+  <button onclick="window.open(`/qr`)" class="btn">QR CODE</button>
+
+  <button onclick="window.open(`/update-session`)" class="btn">UPADTE SESSION</button>
+
+  <button onclick="window.open(`http://wa.me/+919883457657?text=𝗛𝗘𝗟𝗢+𝐌𝐫-𝐚𝐧𝐣𝐚𝐧👀🦋+🌈𝐢 𝐚𝐦 𝐯𝐢𝐬𝐢𝐭𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐰𝐞𝐛𝐬𝐢𝐭𝐞 .....`)" class="btn">Bot Owner</button>
+
+  <button onclick="window.open(`https://chat.whatsapp.com/KLNTBqPjqCW5Pa8vCzcXBw`)" class="btn">Wa-Support</button>
+
+
+
 </body>
+
 </html>
