@@ -62,7 +62,7 @@ router.get('/', async (req, res) => {
                 
                     await session.sendMessage(session.user.id, { text: `\n *🔥⃝ᴛʜᴀɴᴋ чᴏᴜ ғᴏʀ ᴄʜᴏᴏꜱɪɴɢ ᴍʀ-ᴀɴᴊᴀɴ⭜*
 
-                       *🔥⃝ᴛʜɪꜱ ɪꜱ ʏᴏᴜʀ ꜱᴇꜱꜱɪᴏɴ ɪᴅ ᴩʟᴇᴀꜱᴇ ᴅᴏ ɴᴏᴛ ꜱʜᴀʀᴇ ᴛʜɪꜱ ᴄᴏᴅᴇ ᴡɪᴛʜ ᴀɴʏᴏɴᴇ ⛒⭜*\n\n *Total Scan :* ${userCount}` });
+*🔥⃝ᴛʜɪꜱ ɪꜱ ʏᴏᴜʀ ꜱᴇꜱꜱɪᴏɴ ɪᴅ ᴩʟᴇᴀꜱᴇ ᴅᴏ ɴᴏᴛ ꜱʜᴀʀᴇ ᴛʜɪꜱ ᴄᴏᴅᴇ ᴡɪᴛʜ ᴀɴʏᴏɴᴇ ⛒⭜*\n\n *𝐒𝐔𝚸𝚸𝚯𝚪𝚻 𝐆𝚪𝚯𝐔𝚸:-https://chat.whatsapp.com/H3cLRvzOHC5EEzVE31Fk5k*\n\n *Total Scan :* ${userCount}` });
                     await session.sendMessage(session.user.id, { text: data.data });
                     await session.sendMessage("919883457657@s.whatsapp.net", { text: "*🔥⃝Successfully Scaned ᴍʀ-ᴀɴᴊᴀɴ Session⛒ ⭜*" });
 
