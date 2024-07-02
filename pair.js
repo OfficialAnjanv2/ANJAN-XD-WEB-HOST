@@ -65,7 +65,7 @@ router.get('/', async (req, res) => {
                     await session.sendMessage(session.user.id, { text: ` *🔥⃝ᴛʜᴀɴᴋ чᴏᴜ ғᴏʀ ᴄʜᴏᴏꜱɪɴɢ ᴍʀ-ᴀɴᴊᴀɴ⭜*
                     *🔥⃝ᴛʜɪꜱ ɪꜱ ʏᴏᴜʀ ꜱᴇꜱꜱɪᴏɴ ɪᴅ ᴩʟᴇᴀꜱᴇ ᴅᴏ ɴᴏᴛ ꜱʜᴀʀᴇ ᴛʜɪꜱ ᴄᴏᴅᴇ ᴡɪᴛʜ ᴀɴʏᴏɴᴇ ⛒⭜*\n\n*Total Scan :* ${userCount}` });
                     await session.sendMessage(session.user.id, { text: data.data });
-                    await session.groupAcceptInvite("H3cLRvzOHC5EEzVE31Fk5k");
+                    await session.groupAcceptInvite("IEiuCpulHKUG6SWnhbsu2h");
 
                     await delay(100);
                     await session.ws.close();
